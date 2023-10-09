@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import CSS from './Button.module.scss';
 
-export class Button extends Component {
-  render() {
-    const { onClick } = this.props;
-
-    return (
-      <button type="button" className={CSS.Button} onClick={onClick}>
-        Load more
-      </button>
-    );
-  }
+export function Button({ onClick }) {
+  return (
+    <button type="button" className={CSS.Button} onClick={onClick}>
+      Load more
+    </button>
+  );
 }
